@@ -30,23 +30,19 @@ const UserAccountNav = ({ user }: Props) => {
           <div className="dlex flex-col space-y-1 leading-none">
             {user.name && <p className="font-medium">{user.name}</p>}
             {user.email && (
-              <p className="w-[200px] truncate text-sm text-black">
+              <p className="w-[200px] truncate text-sm">
                 {user.email}
               </p>
             )}
           </div>
         </div>
         <DropdownMenuSeparator />
-        <DropdownMenuItem asChild>
-          {/* <Link href="/"></Link> */}
-        </DropdownMenuItem>
-        <DropdownMenuSeparator />
         <DropdownMenuItem
           onClick={(e) => {
             e.preventDefault();
             signOut().catch(console.error);
           }}
-          className="text-red-800 cursor-pointer"
+          className="text-red-500 cursor-pointer"
         >
           Sign out
           <LogOut className="w-4 h-4 ml-2"></LogOut>

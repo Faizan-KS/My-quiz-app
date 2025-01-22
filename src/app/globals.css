@@ -70,3 +70,9 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities{
+  .scrollbar {
+    @apply scrollbar-thin scrollbar-thumb-zinc-500 scrollbar-track-zinc-800 
+  }
+}
